@@ -6,6 +6,19 @@ var userName = readlineSync.question("What is your name?");
 console.log("Welcome " + userName +
   "! Let's start the game!");
 
+//function (processing) 
+function play(question, answer) {
+    var useranswer = readlineSync.question(question);
+  
+    if (useranswer === answer) {
+      console.log("Right")
+    }
+    else {
+      console.log("Wrong")
+    }
+    console.log("---------------------");
+  }   
+  
 //array of objects 
 qna = [
     {
