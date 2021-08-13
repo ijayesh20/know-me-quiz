@@ -6,8 +6,12 @@ var userName = readlineSync.question("What is your name?");
 console.log("Welcome " + userName +
   "! Let's start the game!");
 
+//Highscores
 var score = 0;
-
+highScore = [{
+    name: "Jayesh", highscore: 10
+  }, { name: "Random", highscore: 9 }]
+  
 //function (processing) 
 function play(question, answer) {
     var useranswer = readlineSync.question(question);
@@ -40,3 +44,11 @@ for (i = 0; i < qna.length; i++) {
   }
 
   console.log("Yayyy, your score is", score);
+
+//print Highscore
+console.log("---------------------");
+console.log("HighScores")
+for (j = 0; j < highScore.length; j++) {
+  console.log(highScore[j].name, highScore[j].highscore)
+}
+
